@@ -1,0 +1,25 @@
+.home{
+    width: 100%;
+    min-height:82vh ;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.home img{
+    height: 500px;
+}
+.home p{
+    font-size: 1.3rem;
+    margin-bottom: 6rem;
+   
+}
+.home span{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: var(--verde);
+    
+}

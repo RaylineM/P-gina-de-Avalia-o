@@ -1,0 +1,21 @@
+:root {
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+
+  --amarelo:#FCBC41;
+  --branco:#ffff;
+  --verde:#0a6419;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+

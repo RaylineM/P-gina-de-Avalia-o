@@ -1,0 +1,24 @@
+.header{
+    width: 100%;
+    height:100px;
+    background-color:var(--verde);
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header span{
+    font-size: 1.5rem; /* 24px -> 16px = 1rem */
+    font-weight: bold;
+}
+.header a{
+    text-decoration: none;
+    color: var(--branco);
+    padding-right: 1.5rem;
+    font-size: 18px;
+}
+
+.header a:hover{
+    color: var(--amarelo);
+}
