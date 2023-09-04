@@ -6,28 +6,28 @@ class Forms extends Component {
     super(props);
     this.state = {
       etapa: 1,
-      nomeCompleto: '',
+      nome_completo: '',
       matricula: '',
       curso: '',
       professor: '',
-      conhecimentoProfessor: '',
-      disponibilidadeProfessor: '',
-      empatiaProfessor: '',
-      qualidadeEnsino: '',
-      observacoesProfessor: '',
+      conhecimento_professor: '',
+      disponibilidade_professor: '',
+      empatia_professor: '',
+      qualidade_ensino: '',
+      observacoes_professor: '',
       disciplina: '',
-      relevanciaDisciplina: '',
-      justicaTarefas: '',
-      recursosDidaticos: '',
-      contribuicaoAprendizado: '',
-      observacoesDisciplina: '',
-      cursoAvaliado: '',
-      organizacaoCurso: '',
-      atendeExpectativas: '',
-      qualidadeRecursos: '',
-      suporteAdministrativo: '',
-      recomendariaCurso: '',
-      observacoesCurso: '',
+      relevancia_disciplina: '',
+      justica_tarefas: '',
+      recursos_didaticos: '',
+      contribuicao_aprendizado: '',
+      observacoes_disciplina: '',
+      curso_avaliado: '',
+      organizacao_curso: '',
+      atende_expectativas: '',
+      qualidade_recursos: '',
+      suporte_administrativo: '',
+      recomendaria_curso: '',
+      observacoes_curso: '',
     };
   }
 
@@ -65,7 +65,7 @@ class Forms extends Component {
               <>
                 <label>
                   Nome Completo:
-                  <input type="text" name="nomeCompleto" value={this.state.nomeCompleto} onChange={this.handleInputChange} />
+                  <input type="text" name="nome_completo" value={this.state.nomeCompleto} onChange={this.handleInputChange} />
                 </label>
                 <label>
                   Matrícula:
@@ -73,7 +73,13 @@ class Forms extends Component {
                 </label>
                 <label>
                   Curso que Frequenta:
-                  <input type="text" name="curso" value={this.state.curso} onChange={this.handleInputChange} />
+                  <select name="curso_frequenta" value={this.state.cursoFrequenta} onChange={this.handleInputChange}>
+                    <option value="" disabled>Selecione um curso</option>
+                    <option value="ADS">Análise e Desenvolvimento de Sistemas</option>
+                    <option value="Fis">Física</option>
+                    <option value="GAb">Gestão Ambiental</option>
+                    <option value="Mat">Matemática</option>
+                  </select>
                 </label>
               </>
             )}
@@ -83,17 +89,17 @@ class Forms extends Component {
                   Qual é o nome do professor que você está avaliando:
                   <select name="professor" value={this.state.professor} onChange={this.handleInputChange}>
                     <option value="" disabled>Selecione um professor</option>
-                    <option value="Alan Silva">Alan Silva</option>
-                    <option value="Carlos Estevão">Carlos Estevão</option>
-                    <option value="Edson Cavalcante">Edson Cavalcante</option>
-                    <option value="Eutino Sirqueira">Eutino Sirqueira</option>
-                    <option value="Felipe Gonçalves">Felipe Gonçalves</option>
-                    <option value="Karl Alelaf">Karl Alelaf</option>
+                    <option value="prof1">Alan Silva</option>
+                    <option value="prof2">Carlos Estevão</option>
+                    <option value="prof3">Edson Cavalcante</option>
+                    <option value="prof4">Eutino Sirqueira</option>
+                    <option value="prof5">Felipe Gonçalves</option>
+                    <option value="prof6">Karl Alelaf</option>
                   </select>
                 </label>
                 <label>
                   Como você avaliaria o conhecimento do professor sobre o assunto:
-                  <select name="conhecimentoProfessor" value={this.state.conhecimentoProfessor} onChange={this.handleInputChange}>
+                  <select name="conhecimento_professor" value={this.state.conhecimentoProfessor} onChange={this.handleInputChange}>
                     <option value="" disabled>Selecione uma opção</option>
                     <option value="Excelente">Excelente</option>
                     <option value="Bom">Bom</option>
@@ -103,7 +109,7 @@ class Forms extends Component {
                 </label>
                 <label>
                   Como você avaliaria a disponibilidade do professor para tirar dúvidas e fornecer suporte adicional:
-                  <select name="disponibilidadeProfessor" value={this.state.disponibilidadeProfessor} onChange={this.handleInputChange}>
+                  <select name="disponibilidade_professor" value={this.state.disponibilidadeProfessor} onChange={this.handleInputChange}>
                     <option value="" disabled>Selecione uma opção</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -114,17 +120,17 @@ class Forms extends Component {
                 </label>
                 <label>
                   O professor demonstrou empatia e respeito pelos alunos:
-                  <select name="empatiaProfessor" value={this.state.empatiaProfessor} onChange={this.handleInputChange}>
+                  <select name="empatia_professor" value={this.state.empatiaProfessor} onChange={this.handleInputChange}>
                     <option value="" disabled>Selecione uma opção</option>
-                    <option value="Sim, sempre">Sim, sempre</option>
-                    <option value="Às vezes">Às vezes</option>
+                    <option value="Sim">Sim, sempre</option>
+                    <option value="as_vezes">Às vezes</option>
                     <option value="Raramente">Raramente</option>
-                    <option value="Não, nunca">Não, nunca</option>
+                    <option value="nunca">Não, nunca</option>
                   </select>
                 </label>
                 <label>
                   Em geral, como você avaliaria a qualidade do ensino fornecido por este professor:
-                  <select name="qualidadeEnsino" value={this.state.qualidadeEnsino} onChange={this.handleInputChange}>
+                  <select name="qualidade_ensino" value={this.state.qualidadeEnsino} onChange={this.handleInputChange}>
                     <option value="" disabled>Selecione uma opção</option>
                     <option value="Excelente">Excelente</option>
                     <option value="Bom">Bom</option>
@@ -134,7 +140,7 @@ class Forms extends Component {
                 </label>
                 <label>
                   Observações sobre o Professor (opcional):
-                  <textarea name="observacoesProfessor" value={this.state.observacoesProfessor} onChange={this.handleInputChange}></textarea>
+                  <textarea name="observacoes_professor" value={this.state.observacoesProfessor} onChange={this.handleInputChange}></textarea>
                 </label>
               </>
             )}
@@ -150,7 +156,7 @@ class Forms extends Component {
                 </label>
                 <label>
                   Em uma escala de 1 a 5, como você avaliaria a relevância desta disciplina para o seu programa de estudos:
-                  <select name="relevanciaDisciplina" value={this.state.relevanciaDisciplina} onChange={this.handleInputChange}>
+                  <select name="relevancia_disciplina" value={this.state.relevanciaDisciplina} onChange={this.handleInputChange}>
                     <option value="" disabled>Selecione uma opção</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -161,16 +167,16 @@ class Forms extends Component {
                 </label>
                 <label>
                   As avaliações e tarefas dessa disciplina foram justas e apropriadas:
-                  <select name="justicaTarefas" value={this.state.justicaTarefas} onChange={this.handleInputChange}>
+                  <select name="justica_tarefas" value={this.state.justicaTarefas} onChange={this.handleInputChange}>
                     <option value="" disabled>Selecione uma opção</option>
                     <option value="Sim">Sim</option>
-                    <option value="Não">Não</option>
+                    <option value="No">Não</option>
                     <option value="Parcialmente">Parcialmente</option>
                   </select>
                 </label>
                 <label>
                   Como você avaliaria os recursos didáticos utilizados no curso (livros, materiais online, etc.):
-                  <select name="recursosDidaticos" value={this.state.recursosDidaticos} onChange={this.handleInputChange}>
+                  <select name="recursos_didaticos" value={this.state.recursosDidaticos} onChange={this.handleInputChange}>
                     <option value="" disabled>Selecione uma opção</option>
                     <option value="Excelente">Excelente</option>
                     <option value="Bom">Bom</option>
@@ -181,16 +187,16 @@ class Forms extends Component {
                 </label>
                 <label>
                   Você sentiu que esta disciplina contribuiu positivamente para o seu aprendizado:
-                  <select name="contribuicaoAprendizado" value={this.state.contribuicaoAprendizado} onChange={this.handleInputChange}>
+                  <select name="contribuicao_aprendizado" value={this.state.contribuicaoAprendizado} onChange={this.handleInputChange}>
                     <option value="" disabled>Selecione uma opção</option>
                     <option value="Sim">Sim</option>
-                    <option value="Não">Não</option>
+                    <option value="Nao">Não</option>
                     <option value="Parcialmente">Parcialmente</option>
                   </select>
                 </label>
                 <label>
                   Observações sobre a Disciplina (opcional):
-                  <textarea name="observacoesDisciplina" value={this.state.observacoesDisciplina} onChange={this.handleInputChange}></textarea>
+                  <textarea name="observacoes_disciplina" value={this.state.observacoesDisciplina} onChange={this.handleInputChange}></textarea>
                 </label>
               </>
             )}
@@ -198,17 +204,17 @@ class Forms extends Component {
               <>
                 <label>
                   Qual é o nome do curso que você está avaliando:
-                  <select name="cursoAvaliado" value={this.state.cursoAvaliado} onChange={this.handleInputChange}>
+                  <select name="curso_avaliado" value={this.state.cursoAvaliado} onChange={this.handleInputChange}>
                     <option value="" disabled>Selecione um curso</option>
-                    <option value="Análise e Desenvolvimento de Sistemas">Análise e Desenvolvimento de Sistemas</option>
-                    <option value="Física">Física</option>
-                    <option value="Gestão Ambiental">Gestão Ambiental</option>
-                    <option value="Matemática">Matemática</option>
+                    <option value="ADS">Análise e Desenvolvimento de Sistemas</option>
+                    <option value="Fis">Física</option>
+                    <option value="GAb">Gestão Ambiental</option>
+                    <option value="Mat">Matemática</option>
                   </select>
                 </label>
                 <label>
                   Como você avaliaria a organização geral do curso e sua estrutura curricular:
-                  <select name="organizacaoCurso" value={this.state.organizacaoCurso} onChange={this.handleInputChange}>
+                  <select name="organizacao_curso" value={this.state.organizacaoCurso} onChange={this.handleInputChange}>
                     <option value="" disabled>Selecione uma opção</option>
                     <option value="Boa">Boa</option>
                     <option value="Excelente">Excelente</option>
@@ -219,16 +225,16 @@ class Forms extends Component {
                 </label>
                 <label>
                   O curso atendeu às suas expectativas e objetivos de aprendizado:
-                  <select name="atendeExpectativas" value={this.state.atendeExpectativas} onChange={this.handleInputChange}>
+                  <select name="atende_expectativas" value={this.state.atendeExpectativas} onChange={this.handleInputChange}>
                     <option value="" disabled>Selecione uma opção</option>
                     <option value="Sim">Sim</option>
-                    <option value="Não">Não</option>
+                    <option value="Nao">Não</option>
                     <option value="Parcialmente">Parcialmente</option>
                   </select>
                 </label>
                 <label>
                   Como você classificaria a qualidade das instalações e recursos disponíveis para o curso:
-                  <select name="qualidadeRecursos" value={this.state.qualidadeRecursos} onChange={this.handleInputChange}>
+                  <select name="qualidade_recursos" value={this.state.qualidadeRecursos} onChange={this.handleInputChange}>
                     <option value="" disabled>Selecione uma opção</option>
                     <option value="Excelente">Excelente</option>
                     <option value="Bom">Bom</option>
@@ -239,24 +245,24 @@ class Forms extends Component {
                 </label>
                 <label>
                   O suporte administrativo e acadêmico fornecido durante o curso foi satisfatório:
-                  <select name="suporteAdministrativo" value={this.state.suporteAdministrativo} onChange={this.handleInputChange}>
+                  <select name="suporte_administrativo" value={this.state.suporteAdministrativo} onChange={this.handleInputChange}>
                     <option value="" disabled>Selecione uma opção</option>
                     <option value="Sim">Sim</option>
-                    <option value="Não">Não</option>
+                    <option value="Nao">Não</option>
                     <option value="Parcialmente">Parcialmente</option>
                   </select>
                 </label>
                 <label>
                   Você recomendaria este curso para outros estudantes:
-                  <select name="recomendariaCurso" value={this.state.recomendariaCurso} onChange={this.handleInputChange}>
+                  <select name="recomendaria_curso" value={this.state.recomendariaCurso} onChange={this.handleInputChange}>
                     <option value="" disabled>Selecione uma opção</option>
                     <option value="Sim">Sim</option>
-                    <option value="Não">Não</option>
+                    <option value="Nao">Não</option>
                   </select>
                 </label>
                 <label>
                   Observações sobre o Curso(opcional):
-                  <textarea name="observacoesCurso" value={this.state.observacoesCurso} onChange={this.handleInputChange}></textarea>
+                  <textarea name="observacoes_curso" value={this.state.observacoesCurso} onChange={this.handleInputChange}></textarea>
                 </label>
               </>
             )}
