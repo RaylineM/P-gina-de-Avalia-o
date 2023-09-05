@@ -1,8 +1,8 @@
 .formulario {
     max-width: 600px;
     margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -11,7 +11,7 @@
   
   .etapa {
     margin-bottom: 20px;
-    min-height: 68vh;
+    min-height: 65vh;
   }
   
   h1 {
